@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Evento </title>
+    
+    <meta property="og:title" content="Confirmación de Evento">
+    
+    <meta property="og:url" content="https://pequecreacioneskaelhn.github.io/Invitaciones_Adultos/"> 
+    
+    <meta property="og:description" content="Detalles e información de RSVP para nuestro evento exclusivo. Esperamos contar con su distinguida presencia.">
+    
+    <meta property="og:image" content="https://pequecreacioneskaelhn.github.io/Invitaciones_Adultos/fiestas-adultos.png">
+    <meta property="og:image:width" content="768">
+    <meta property="og:image:height" content="513">
+    
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+  <style>
+    /* REGLA UNIVERSAL PARA CORREGIR PROBLEMAS DE ANCHO EN MÓVILES */
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Definición del color Oro */
+    :root {
+        --color-oro: #d4af37;
+        --color-negro: #1a1a1a;
+    }
+
+    /* Estilos Generales */
+    body {
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+        background: linear-gradient(to bottom right, #333333, #1a1a1a);
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: #e0e0e0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* FONDO DE LA TARJETA (Gris oscuro semi-transparente 50%) */
+    .contenedor-tarjeta {
+        background-color: rgba(51, 51, 51, 0.5); 
+        border-radius: 10px; 
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); 
+        text-align: center;
+        max-width: 550px;
+        width: 100%;
+        animation: fadeIn 1s ease-out;
+        position: relative; 
+        border: 2px solid var(--color-oro);
+        color: #ffffff;
+        
+        /* CORRECCIÓN EN MÓVILES */
+        max-width: calc(100% - 20px);
+        overflow-x: hidden;
+    }
+
+    /* Título Principal (RSVP) - Elegantísimo */
+    h1 {
+        font-family: 'Great Vibes', cursive;
+        font-weight: 400;
+        color: var(--color-oro);
+        font-size: 4.0em;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+        font-size: 1.1em;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    /* Contenedor de Botones */
+    .opciones-botones {
+        display: flex; flex-direction: column; gap: 15px; margin-top: 30px;
+    }
+
+    /* Estilo Base del Botón */
+    .boton-wa {
+        display: inline-flex; align-items: center; justify-content: center;
+        padding: 15px 30px; 
+        color: var(--color-negro);
+        text-decoration: none; border-radius: 4px; 
+        font-size: 1.1em; font-weight: 600;
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+        border: none; cursor: pointer; width: 100%; max-width: 350px; margin: 0 auto;
+        
+        /* CORRECCIÓN DE TEXTO LARGO EN BOTONES */
+        white-space: normal; 
+        word-wrap: break-word; 
+        text-align: center; 
+    }
+
+    .boton-wa i { margin-right: 10px; font-size: 1.3em; }
+
+    /* Botones: Fondo DORADO */
+    .boton-confirma, .boton-declina {
+        background-color: var(--color-oro); 
+        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.5); 
+    }
+
+    .boton-confirma:hover, .boton-declina:hover {
+        background-color: #e6c56b; 
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(212, 175, 55, 0.7); 
+    }
+
+    /* MARCA EN LA ESQUINA INFERIOR DERECHA DE LA PANTALLA (FUERA DE LA TARJETA) */
+    .footer-marca {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-size: 0.9em;
+        color: var(--color-oro); 
+        font-weight: 600;
+        font-family: 'Open Sans', sans-serif;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        z-index: 99;
+    }
+
+    /* Animación de entrada de la tarjeta */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive para pantallas pequeñas */
+    @media (max-width: 600px) {
+        h1 { font-size: 3.5em; }
+        .contenedor-tarjeta { padding: 25px; }
+        .boton-wa { font-size: 1em; padding: 12px 25px; }
+        .footer-marca { bottom: 10px; right: 10px; font-size: 0.8em; }
+    }
+</style>
+</head>
+<body>
+    <div class="contenedor-tarjeta">
+        <div class="info-boda">
+    <h3>Detalles Importantes</h3>
+
+    <p><strong>Código de Vestimenta:</strong> Formal. Solicitamos a los hombres portar traje y corbata, y a las mujeres, vestido largo. ¡Evitemos el blanco!</p>
+
+    <h3>Ubicación</h3>
+    <p>Ceremonia: Iglesia [Nombre de la Iglesia], [Dirección]</p>
+    <a href="[PEGAR ENLACE DE GOOGLE MAPS AQUÍ]" target="_blank" class="boton-mapa">
+        <i class="fas fa-map-marker-alt"></i> Ver Mapa de la Ubicación
+    </a>
+    
+    <h3>Mesa de Regalos</h3>
+    <p>Nuestra mayor felicidad es tu presencia. Si deseas obsequiarnos algo, te agradecemos considerarlo en nuestra lista de regalos o cuenta bancaria. [Número de Cuenta]</p>
+
+</div>
+      <h1>[Nombre del Evento: Boda]</h1> 
+
+<p>
+    ¡Bienvenido al Demo de Invitación para Eventos Formales!
+    Usa los botones de abajo para probar la funcionalidad de confirmación. Este diseño formal y elegante es adaptable a cualquier evento.
+    **El mensaje de WhatsApp será totalmente personalizado con los detalles de tu evento al contratar.**
+</p>
+        
+     <div class="opciones-botones">
+    <a 
+        href="https://api.whatsapp.com/send?phone=50496005178&text=Esta%20es%20una%20prueba%20de%20env%C3%ADo%20de%20RSVP.%20Puedo%20confirmar%20el%20n%C3%BAmero%20de%20asistentes%20para%20este%20dise%C3%B1o%20de%20Adultos:%20[N%C3%BAmero%20de%20Asistentes]." 
+        class="boton-wa boton-confirma" 
+        target="_blank"
+    >
+        <i class="fas fa-check-circle"></i> PROBAR: Confirmar Asistencia
+    </a>
+
+    <a 
+        href="https://api.whatsapp.com/send?phone=50496005178&text=Lamento%20informar%20que%20no%20podr%C3%A9%20asistir%20al%20evento%20Formal." 
+        class="boton-wa boton-declina" 
+        target="_blank"
+    >
+        <i class="fas fa-times-circle"></i> PROBAR: Declinar Asistencia
+    </a>
+</div>
+    
+    <div class="footer-marca">PequeCreaciones_KaelHN</div>
+</body>
+</html>
