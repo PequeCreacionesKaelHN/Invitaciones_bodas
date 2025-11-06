@@ -19,82 +19,81 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-  <style>
-      /* Estilos Generales */
-    body {
-        margin: 0;
-        font-family: 'Open Sans', sans-serif;
-        
-        /* --- NUEVO FONDO PARA BODA (MARMOL/FLORAL SUAVE) --- */
-        /*
-          IMPORTANTE: Sube la imagen de fondo (ej. fondo-boda.png) 
-          a tu nuevo repositorio 'Invitaciones_Bodas' en GitHub.
-        */
-        background: 
-            url('fondo-boda.png') no-repeat center center fixed; /* Imagen de fondo */
-        background-color: #f5f5f5; /* Color de respaldo (gris perla) */
-        background-size: cover;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        color: #333333; /* Cambiamos el color de texto a gris oscuro para contraste con fondos claros */
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    /* También es importante cambiar el color de la tarjeta para que destaque sobre el fondo claro */
-    .contenedor-tarjeta {
-        background-color: rgba(255, 255, 255, 0.95); /* Blanco semi-transparente */
-        border: 2px solid #b8860b; /* Borde dorado suave */
-        /* ... el resto de estilos ... */
-    }
+<style>
     /* REGLA UNIVERSAL PARA CORREGIR PROBLEMAS DE ANCHO EN MÓVILES */
     * {
         box-sizing: border-box;
     }
 
-    /* Definición del color Oro */
+    /* Definición de colores principales (Dorado y Negro/Gris Elegante) */
     :root {
-        --color-oro: #d4af37;
-        --color-negro: #1a1a1a;
+        --color-oro: #b8860b; /* Dorado Oscuro/Viejo */
+        --color-texto: #333333; /* Gris Oscuro para Contraste */
+        --color-fondo-tarjeta: #ffffff; /* Blanco Puro */
+        --color-botones-bg: #b8860b; /* Dorado para botones */
     }
 
-    /* FONDO DE LA TARJETA (Gris oscuro semi-transparente 50%) */
+    /* Estilos Generales */
+    body {
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+        
+        /* --- FONDO PARA BODA (Asegúrate que 'fondo-boda.png' esté en tu repositorio) --- */
+        background: 
+            url('fondo_boda.png') no-repeat center center fixed; 
+        background-color: #f5f5f5; /* Color de respaldo, Gris Perla */
+        background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: var(--color-texto); 
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* FONDO DE LA TARJETA (Blanco semi-transparente y Borde Dorado) */
     .contenedor-tarjeta {
-        background-color: rgba(51, 51, 51, 0.5); 
+        background-color: rgba(255, 255, 255, 0.95); /* Blanco semi-transparente */
         border-radius: 10px; 
         padding: 40px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); 
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); 
         text-align: center;
         max-width: 550px;
         width: 100%;
         animation: fadeIn 1s ease-out;
         position: relative; 
-        border: 2px solid var(--color-oro);
-        color: #ffffff;
-        
-        /* CORRECCIÓN EN MÓVILES */
-        max-width: calc(100% - 20px);
-        overflow-x: hidden;
+        border: 2px solid var(--color-oro); /* Borde dorado */
+        color: var(--color-texto);
+        max-width: calc(100% - 20px); 
+        overflow-x: hidden; 
     }
 
-    /* Título Principal (RSVP) - Elegantísimo */
+    /* Títulos */
     h1 {
         font-family: 'Great Vibes', cursive;
         font-weight: 400;
-        color: var(--color-oro);
+        color: var(--color-oro); /* Título en Dorado */
         font-size: 4.0em;
         margin-top: 10px;
         margin-bottom: 20px;
         line-height: 1.2;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
+    }
+    
+    h3 {
+        color: var(--color-oro); /* Subtítulos en Dorado */
+        font-size: 1.3em;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(184, 134, 11, 0.3); /* Línea dorada sutil */
+        padding-bottom: 5px;
     }
 
     p {
         font-size: 1.1em;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         line-height: 1.6;
     }
 
@@ -103,11 +102,11 @@
         display: flex; flex-direction: column; gap: 15px; margin-top: 30px;
     }
 
-    /* Estilo Base del Botón */
-    .boton-wa {
+    /* Estilo Base del Botón (Incluyendo el nuevo .boton-mapa) */
+    .boton-wa, .boton-mapa {
         display: inline-flex; align-items: center; justify-content: center;
         padding: 15px 30px; 
-        color: var(--color-negro);
+        color: var(--color-fondo-tarjeta); /* Letra blanca/clara */
         text-decoration: none; border-radius: 4px; 
         font-size: 1.1em; font-weight: 600;
         transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
@@ -117,46 +116,33 @@
         white-space: normal; 
         word-wrap: break-word; 
         text-align: center; 
+        
+        /* Fondo de Botón General */
+        background-color: var(--color-botones-bg);
+        box-shadow: 0 5px 15px rgba(184, 134, 11, 0.5); 
     }
 
-    .boton-wa i { margin-right: 10px; font-size: 1.3em; }
-
-    /* Botones: Fondo DORADO */
-    .boton-confirma, .boton-declina {
-        background-color: var(--color-oro); 
-        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.5); 
-    }
-
-    .boton-confirma:hover, .boton-declina:hover {
-        background-color: #e6c56b; 
+    .boton-wa:hover, .boton-mapa:hover {
+        background-color: #c9a557; /* Dorado un poco más claro al pasar el ratón */
         transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(212, 175, 55, 0.7); 
+        box-shadow: 0 8px 20px rgba(184, 134, 11, 0.7); 
     }
 
-    /* MARCA EN LA ESQUINA INFERIOR DERECHA DE LA PANTALLA (FUERA DE LA TARJETA) */
+    .boton-wa i, .boton-mapa i { margin-right: 10px; font-size: 1.3em; }
+
+    /* MARCA EN LA ESQUINA INFERIOR DERECHA */
     .footer-marca {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        font-size: 0.9em;
-        color: var(--color-oro); 
-        font-weight: 600;
+        position: fixed; bottom: 20px; right: 20px; font-size: 0.9em;
+        color: var(--color-oro); font-weight: 600;
         font-family: 'Open Sans', sans-serif;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        z-index: 99;
-    }
-
-    /* Animación de entrada de la tarjeta */
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); z-index: 99;
     }
 
     /* Responsive para pantallas pequeñas */
     @media (max-width: 600px) {
         h1 { font-size: 3.5em; }
         .contenedor-tarjeta { padding: 25px; }
-        .boton-wa { font-size: 1em; padding: 12px 25px; }
+        .boton-wa, .boton-mapa { font-size: 1em; padding: 12px 25px; }
         .footer-marca { bottom: 10px; right: 10px; font-size: 0.8em; }
     }
 </style>
