@@ -55,8 +55,14 @@
 
     /* FONDO DE LA TARJETA (Blanco semi-transparente y Borde Dorado) */
     .contenedor-tarjeta {
-        background-color: rgba(255, 255, 255, 0.95); /* Blanco semi-transparente */
-        border-radius: 10px; 
+        /* Hacemos la tarjeta completamente transparente */
+        background-color: transparent; 
+        
+        /* Opcional: Quitamos el borde dorado si no lo quieres en el nuevo look */
+        border: none; 
+        
+        /* ... el resto de estilos se mantiene ... */
+    }
         padding: 40px;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); 
         text-align: center;
