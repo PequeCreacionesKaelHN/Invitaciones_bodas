@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles Adicionales de la Boda</title>
+    
+    <meta property="og:title" content="Detalles: Agenda, Vestimenta y Ubicación de la Boda">
+    <meta property="og:description" content="Toda la información práctica que necesitas para acompañarnos en este día especial.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* REGLA UNIVERSAL PARA CORREGIR PROBLEMAS DE ANCHO EN MÓVILES */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Definición de colores principales (Dorado y Negro/Gris Elegante) */
+        :root {
+            --color-oro: #b8860b; /* Dorado Oscuro/Viejo */
+            --color-texto: #333333; /* Gris Oscuro para Contraste */
+            --color-fondo-tarjeta: transparent; /* Transparente */
+            --color-botones-bg: #b8860b; /* Dorado para botones */
+        }
+
+        /* Estilos Generales */
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            
+            /* --- FONDO PARA BODA (Asegúrate que 'fondo-boda-v2.png' esté en tu repositorio) --- */
+            /* Usar el mismo nombre de archivo que tu index.html */
+            background: 
+                url('fondo-boda-v2.png') no-repeat center center fixed; 
+            background-color: #f5f5f5; /* Color de respaldo, Gris Perla */
+            background-size: cover;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--color-texto); 
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* FONDO DE LA TARJETA (Transparente y sin borde) */
+        .contenedor-tarjeta {
+            background-color: var(--color-fondo-tarjeta); 
+            border-radius: 10px; 
+            padding: 40px;
+            box-shadow: none; /* Quitamos la sombra */
+            text-align: center;
+            max-width: 550px;
+            width: 100%;
+            animation: fadeIn 1s ease-out;
+            position: relative; 
+            border: none; /* Quitamos el borde */
+            color: var(--color-texto);
+            max-width: calc(100% - 20px); 
+            overflow-x: hidden; 
+        }
+
+        /* Títulos */
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-weight: 400;
+            color: var(--color-oro); /* Título en Dorado */
+            font-size: 3.5em; /* Un poco más pequeño que el principal */
+            margin-top: 10px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+        
+        h3 {
+            color: var(--color-oro); /* Subtítulos en Dorado */
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(184, 134, 11, 0.3); /* Línea dorada sutil */
+            padding-bottom: 5px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilo para el Botón (Dorado) */
+        .boton-wa, .boton-mapa {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 15px 30px; 
+            color: white; /* Letra blanca/clara */
+            text-decoration: none; border-radius: 4px; 
+            font-size: 1.1em; font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            border: none; cursor: pointer; width: 100%; max-width: 350px; margin: 10px auto;
+            
+            background-color: var(--color-botones-bg);
+            box-shadow: 0 5px 15px rgba(184, 134, 11, 0.5); 
+            white-space: normal; word-wrap: break-word; text-align: center; 
+        }
+
+        .boton-wa:hover, .boton-mapa:hover {
+            background-color: #c9a557; 
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(184, 134, 11, 0.7); 
+        }
+
+        .boton-wa i, .boton-mapa i { margin-right: 10px; font-size: 1.3em; }
+
+        /* MARCA EN LA ESQUINA INFERIOR DERECHA */
+        .footer-marca {
+            position: fixed; bottom: 20px; right: 20px; font-size: 0.9em;
+            color: var(--color-oro); font-weight: 600;
+            font-family: 'Open Sans', sans-serif;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); z-index: 99;
+        }
+
+        /* Responsive para pantallas pequeñas */
+        @media (max-width: 600px) {
+            h1 { font-size: 3.0em; }
+            .contenedor-tarjeta { padding: 25px; }
+            .boton-wa, .boton-mapa { font-size: 1em; padding: 12px 25px; }
+            .footer-marca { bottom: 10px; right: 10px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-tarjeta">
+        
+        <h1>INFORMACIÓN ADICIONAL</h1>
+        
+        <h3><i class="far fa-clock"></i> Agenda y Horarios</h3>
+        <p>
+            Para tu comodidad, aquí tienes la secuencia de nuestro día especial:
+        </p>
+        <p>
+            <strong>1:00 PM:</strong> Ceremonia Religiosa en [Nombre de la Iglesia/Lugar]<br>
+            <strong>3:00 PM:</strong> Cóctel de Bienvenida en [Lugar]<br>
+            <strong>5:00 PM:</strong> Recepción y Cena en Salón [Nombre del Salón]
+        </p>
+
+        <h3><i class="fas fa-map-marker-alt"></i> Ubicaciones</h3>
+        <p>
+            Te compartimos las direcciones exactas en Google Maps para que no te pierdas.
+        </p>
+        
+        <a href="[PEGAR ENLACE DE GOOGLE MAPS DE LA CEREMONIA]" target="_blank" class="boton-mapa">
+            <i class="fas fa-church"></i> Ver Mapa de la Ceremonia
+        </a>
+        <a href="[https://maps.app.goo.gl/9A6SssqS3gyCygb4A]" target="_blank" class="boton-mapa">
+            <i class="fas fa-glass-cheers"></i> Ver Mapa de la Recepción
+        </a>
+
+        <h3><i class="fas fa-tshirt"></i> Código de Vestimenta</h3>
+        <p>
+            El código es **Etiqueta Rigurosa**. <br>
+            Hombres: Traje y corbata. <br>
+            Mujeres: Vestido largo. <br>
+            *Pedimos amablemente evitar el color blanco en su vestimenta.*
+        </p>
+
+        <h3><i class="fas fa-gift"></i> Mesa de Regalos</h3>
+        <p>
+            Nuestra mayor alegría es contar con tu presencia. Si deseas obsequiarnos algo, puedes encontrar nuestra mesa de regalos en:<br>
+            <strong>[Nombre de Tienda de Regalos]</strong> o cuenta: **[Número de Cuenta Bancaria]**
+        </p>
+
+        <a 
+            href="index.html" 
+            class="boton-wa" 
+            style="background-color: #333333; color: white;" 
+        >
+            <i class="fas fa-arrow-left"></i> Volver a Confirmar Asistencia
+        </a>
+    </div> 
+    
+    <div class="footer-marca">PequeCreaciones_KaelHN</div>
+</body>
+</html>
